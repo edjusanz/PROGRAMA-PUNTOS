@@ -10,58 +10,65 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #8DAF54; /* Color de fondo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
         /* Contenedor principal */
         .container {
-            width: 80%;
-            margin: 0 auto;
+            width: 90%;
+            max-width: 1000px;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-        }
-
-        /* Título principal */
-        .titulo {
             text-align: center;
-            color: #333;
         }
 
-        /* Contenedor de los productos */
+        /* Título */
+        .titulo {
+            color: #00471D;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Contenedor de los productos en una sola fila */
         .productos {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
         }
 
         /* Estilo de cada producto */
         .producto {
-            background-color: #f9f9f9;
-            padding: 20px;
+            background-color: #C7FD17;
+            padding: 15px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
             width: 30%;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .producto:hover {
-            transform: translateY(-10px);
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
         }
 
         /* Estilo de las imágenes */
         .producto-img {
             width: 100%;
             height: auto;
-            max-width: 250px;
+            max-width: 200px;
             margin-bottom: 10px;
             border-radius: 8px;
         }
 
-        /* Estilo de los botones */
+        /* Estilo del botón */
         .boton-canje {
             background-color: #42BF00;
             color: white;
@@ -69,11 +76,17 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         .boton-canje:hover {
             background-color: #00471D;
+            transform: scale(1.1);
+        }
+
+        .boton-canje:active {
+            transform: scale(0.9);
         }
 
         /* Estilo de los puntos */
@@ -82,7 +95,7 @@
             margin-top: 10px;
             font-weight: bold;
             font-size: 18px;
-            color: #333;
+            color: #00471D;
         }
     </style>
 </head>
@@ -90,18 +103,18 @@
     <div class="container">
         <h1 class="titulo">Canjea tus puntos</h1>
         <div class="productos">
-            <!-- Producto 1: Electrodomésticos -->
+            <!-- Producto 1: Electrodoméstico -->
             <div class="producto">
-                <img src="img/electrodomestico.png" alt="Electrodoméstico" class="producto-img">
+                <img src="img/electrodomestico.jpg" alt="Electrodoméstico" class="producto-img">
                 <h3>Electrodoméstico</h3>
                 <p>Canjea tus puntos por un electrodoméstico de calidad.</p>
                 <span class="puntos">5000 puntos</span>
                 <button class="boton-canje">Canjear</button>
             </div>
 
-            <!-- Producto 2: Experiencias o Viajes -->
+            <!-- Producto 2: Viaje o experiencia -->
             <div class="producto">
-                <img src="img/viaje.png" alt="Viaje o experiencia" class="producto-img">
+                <img src="img/viaje.jpg" alt="Viaje o experiencia" class="producto-img">
                 <h3>Experiencia o Viaje</h3>
                 <p>Disfruta de una experiencia única o un viaje inolvidable.</p>
                 <span class="puntos">10000 puntos</span>
@@ -110,7 +123,7 @@
 
             <!-- Producto 3: Tarjeta de Regalo -->
             <div class="producto">
-                <img src="img/gift_card.png" alt="Gift Card" class="producto-img">
+                <img src="img/gift_card.jpg" alt="Gift Card" class="producto-img">
                 <h3>Gift Card</h3>
                 <p>Canjea por una tarjeta de regalo y compra lo que desees.</p>
                 <span class="puntos">2000 puntos</span>
