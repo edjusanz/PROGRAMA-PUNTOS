@@ -21,43 +21,39 @@
         /* Contenedor principal */
         .container {
             width: 100%;
-            max-width: 1200px; /* Asegura que el contenedor no se estire demasiado */
+            max-width: 1200px;
             padding: 20px;
-            background-color: #FFFFFF; /* Fondo blanco para el contenido */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #FFFFFF; /* Fondo blanco */
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            overflow: hidden;
         }
 
-        /* Título principal */
+        /* Título */
         .titulo {
             color: #00471D; /* Verde oscuro */
             font-size: 36px;
             margin-bottom: 20px;
         }
 
-        /* Título dinámico */
         .frase-titulo {
-            color: #00471D; /* Verde oscuro para el texto principal */
+            color: #00471D; /* Verde oscuro */
             font-size: 32px;
             font-weight: bold;
             margin-bottom: 20px;
         }
 
         .frase-titulo span {
-            color: #42BF00; /* Verde claro para resaltar palabras */
+            color: #42BF00; /* Verde claro */
         }
 
-        /* Contenedor de los productos en una sola fila */
+        /* Contenedor de los productos */
         .productos {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Asegura que los productos se ajusten */
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Cuadrícula responsive */
             gap: 20px;
             justify-content: center;
-            align-items: start;
-            padding: 0;
-            margin: 0;
+            align-items: center;
         }
 
         /* Estilo de cada producto */
@@ -67,11 +63,11 @@
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 350px; /* Tamaño fijo para todos los productos */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .producto:hover {
@@ -91,17 +87,17 @@
             margin-right: auto;
         }
 
-        /* Estilo del botón */
+        /* Botón de canje */
         .boton-canje {
-            background-color: #42BF00; /* Verde claro */
+            background-color: #42BF00;
             color: white;
             padding: 12px 25px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
             font-size: 18px;
+            margin-top: 20px;
             transition: background-color 0.3s ease, transform 0.2s ease;
-            margin-top: auto;
         }
 
         .boton-canje:hover {
@@ -113,13 +109,13 @@
             transform: scale(0.95);
         }
 
-        /* Estilo de los puntos */
+        /* Puntos */
         .puntos {
             display: block;
             margin-top: 10px;
             font-weight: bold;
             font-size: 18px;
-            color: #333; /* Color oscuro y profesional */
+            color: #333;
         }
     </style>
 </head>
