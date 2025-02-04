@@ -15,17 +15,19 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            box-sizing: border-box;
         }
 
         /* Contenedor principal */
         .container {
-            width: 90%;
-            max-width: 1000px;
+            width: 100%;
+            max-width: 1200px; /* Asegura que el contenedor no se estire demasiado */
             padding: 20px;
             background-color: #FFFFFF; /* Fondo blanco para el contenido */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             text-align: center;
+            overflow: hidden;
         }
 
         /* Título principal */
@@ -49,10 +51,13 @@
 
         /* Contenedor de los productos en una sola fila */
         .productos {
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Asegura que los productos se ajusten */
             gap: 20px;
-            flex-wrap: wrap;
+            justify-content: center;
+            align-items: start;
+            padding: 0;
+            margin: 0;
         }
 
         /* Estilo de cada producto */
@@ -62,8 +67,11 @@
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
-            width: 30%;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 350px; /* Tamaño fijo para todos los productos */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .producto:hover {
@@ -75,9 +83,12 @@
         .producto-img {
             width: 100%;
             height: auto;
-            max-width: 200px;
+            max-width: 180px;
             margin-bottom: 10px;
             border-radius: 8px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Estilo del botón */
@@ -90,6 +101,7 @@
             cursor: pointer;
             font-size: 18px;
             transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: auto;
         }
 
         .boton-canje:hover {
