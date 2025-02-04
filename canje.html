@@ -21,7 +21,7 @@
         /* Contenedor principal */
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1000px;
             padding: 20px;
             background-color: #FFFFFF; /* Fondo blanco */
             border-radius: 10px;
@@ -32,13 +32,13 @@
         /* Título */
         .titulo {
             color: #00471D; /* Verde oscuro */
-            font-size: 36px;
+            font-size: 32px;
             margin-bottom: 20px;
         }
 
         .frase-titulo {
             color: #00471D; /* Verde oscuro */
-            font-size: 32px;
+            font-size: 28px;
             font-weight: bold;
             margin-bottom: 20px;
         }
@@ -50,20 +50,21 @@
         /* Contenedor de los productos */
         .productos {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Cuadrícula responsive */
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Cuadrícula más compacta */
+            gap: 15px;
             justify-content: center;
             align-items: center;
+            margin-top: 20px;
         }
 
         /* Estilo de cada producto */
         .producto {
             background-color: #8DAF54; /* Fondo verde claro */
-            padding: 20px;
+            padding: 15px;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
-            height: 350px; /* Tamaño fijo para todos los productos */
+            height: 300px; /* Tamaño compacto */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -91,12 +92,12 @@
         .boton-canje {
             background-color: #42BF00;
             color: white;
-            padding: 12px 25px;
+            padding: 12px 20px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 18px;
-            margin-top: 20px;
+            font-size: 16px;
+            margin-top: 10px;
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
@@ -109,19 +110,18 @@
             transform: scale(0.95);
         }
 
-        /* Puntos */
         .puntos {
             display: block;
-            margin-top: 10px;
+            margin-top: 5px;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 16px;
             color: #333;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="frase-titulo">¡Haz crecer tus <span>puntos PAYJOY</span> y canjea <span>increíbles premios</span>!</h1>
+        <h1 class="frase-titulo">¡Canjea tus <span>puntos PAYJOY</span> por premios increíbles!</h1>
         <div class="productos">
             <!-- Producto 1: Tecnología -->
             <div class="producto">
