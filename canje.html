@@ -10,7 +10,7 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #C7FD17; /* Fondo verde claro */
+            background-color: #E0F7C2; /* Fondo verde claro más suave */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,15 +24,15 @@
             max-width: 1200px;
             padding: 20px;
             background-color: #FFFFFF; /* Fondo blanco */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
         /* Título */
         .titulo {
             color: #00471D; /* Verde oscuro */
-            font-size: 32px;
+            font-size: 36px;
             margin-bottom: 20px;
         }
 
@@ -40,7 +40,7 @@
             color: #00471D; /* Verde oscuro */
             font-size: 28px;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .frase-titulo span {
@@ -49,22 +49,21 @@
 
         /* Contenedor de los productos */
         .productos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cuadrícula más compacta */
             gap: 20px;
+            justify-content: center;
+            align-items: stretch; /* Asegura que todos los productos tengan la misma altura */
             margin-top: 20px;
         }
 
         /* Estilo de cada producto */
         .producto {
-            background-color: #8DAF54; /* Fondo verde claro */
-            padding: 15px;
+            background-color: #F5F5F5; /* Fondo gris claro */
+            padding: 20px;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
-            width: 260px; /* Tamaño uniforme para todos los productos */
-            height: 320px; /* Ajustado para contenido */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -72,23 +71,43 @@
         }
 
         .producto:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
         /* Estilo de las imágenes */
         .producto-img {
             width: 100%;
-            height: auto;
-            max-width: 180px;
-            margin-bottom: 10px;
+            height: 150px; /* Altura fija para las imágenes */
+            object-fit: contain; /* Asegura que la imagen se ajuste sin distorsión */
             border-radius: 8px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 15px;
         }
 
-        /* Botón de canje */
+        /* Título del producto */
+        .producto h3 {
+            color: #00471D; /* Verde oscuro */
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Descripción del producto */
+        .producto p {
+            color: #333;
+            font-size: 14px;
+            margin-bottom: 15px;
+            flex-grow: 1; /* Asegura que la descripción ocupe el espacio disponible */
+        }
+
+        /* Puntos y botón de canje */
+        .puntos {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #42BF00; /* Verde claro */
+        }
+
         .boton-canje {
             background-color: #42BF00;
             color: white;
@@ -97,25 +116,17 @@
             border-radius: 8px;
             cursor: pointer;
             font-size: 16px;
-            margin-top: 10px;
+            margin-top: 15px;
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         .boton-canje:hover {
-            background-color: #00471D; /* Verde oscuro al pasar el mouse */
-            transform: scale(1.1);
+            background-color: #369700; /* Verde más oscuro al pasar el mouse */
+            transform: scale(1.05);
         }
 
         .boton-canje:active {
             transform: scale(0.95);
-        }
-
-        .puntos {
-            display: block;
-            margin-top: 5px;
-            font-weight: bold;
-            font-size: 16px;
-            color: #333;
         }
     </style>
 </head>
